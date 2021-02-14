@@ -1,0 +1,180 @@
+Script started on 2020-04-13 20:16:32-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="100" LINES="50"]
+]0;kali@kali: ~/Desktop/lab1[01;31mkali@kali[00m:[01;34m~/Desktop/lab1[00m$ exithashcat -m 100 --potfile-disable abc-sha.hash human-pass.txt -o crackedPass.txt[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1.hash human-pass.txt -o crackedPass.txt[A]0;kali@kali: ~/Desktop/lab1[01;31mkali@kali[00m:[01;34m~/Desktop/lab1[00m$ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+hashcat (v5.1.0) starting...
+
+OpenCL Platform #1: The pocl project
+====================================
+* Device #1: pthread-AMD Ryzen 5 2600 Six-Core Processor, 512/1493 MB allocatable, 2MCU
+
+Counting lines in abc-sha1.hash...[2KCounted lines in abc-sha1.hash...[2KParsing Hashes: 1/49567 (0.00%)...[2KParsed Hashes: 49567/49567 (100.00%)[2KSorting hashes...[2KSorted hashes...[2KRemoving duplicate hashes...[2KRemoved duplicate hashes...[2KSorting salts...[2KSorted salts...[2KGenerating bitmap tables...[2KGenerated bitmap tables...[2KHashes: 49567 digests; 41583 unique digests, 1 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Applicable optimizers:
+* Zero-Byte
+* Early-Skip
+* Not-Salted
+* Not-Iterated
+* Single-Salt
+* Raw-Hash
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+
+[33mATTENTION! Pure (unoptimized) OpenCL kernels selected.[0m
+[33mThis enables cracking passwords and salts > length 32 but for the price of drastically reduced performance.[0m
+[33mIf you want to switch to optimized OpenCL kernels, append -O to your commandline.[0m
+[33m[0m
+Watchdog: Hardware monitoring interface not found on your system.
+Watchdog: Temperature abort trigger disabled.
+
+Initializing device kernels and memory...[2KInitializing OpenCL runtime for device #1...[2K[33m* Device #1: build_opts '-cl-std=CL1.2 -I OpenCL -I /usr/share/hashcat/OpenCL -D LOCAL_MEM_TYPE=2 -D VENDOR_ID=64 -D CUDA_ARCH=0 -D AMD_ROCM=0 -D VECT_SIZE=8 -D DEVICE_TYPE=2 -D DGST_R0=3 -D DGST_R1=4 -D DGST_R2=2 -D DGST_R3=1 -D DGST_ELEM=5 -D KERN_TYPE=100 -D _unroll'[0m
+Initialized OpenCL runtime for device #1...[2KInitialized device kernels and memory...[2KDictionary cache hit:
+* Filename..: human-pass.txt
+* Passwords.: 63941069
+* Bytes.....: 716441107
+* Keyspace..: 63941069
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit => s
+
+Session..........: hashcat
+Status...........: Running
+Hash.Type........: SHA1
+Hash.Target......: abc-sha1.hash
+Time.Started.....: Mon Apr 13 20:16:39 2020 (2 secs)
+Time.Estimated...: Mon Apr 13 20:17:35 2020 (54 secs)
+Guess.Base.......: File (human-pass.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1135.6 kH/s (1.06ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 501/41583 (1.20%) Digests, 0/1 (0.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:15631,937902,22509651 (Min,Hour,Day)
+Progress.........: 2172928/63941069 (3.40%)
+Rejected.........: 0/2172928 (0.00%)
+Restore.Point....: 2172928/63941069 (3.40%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: 1990SE -> 1991272008
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit => s
+
+Session..........: hashcat
+Status...........: Running
+Hash.Type........: SHA1
+Hash.Target......: abc-sha1.hash
+Time.Started.....: Mon Apr 13 20:16:39 2020 (6 secs)
+Time.Estimated...: Mon Apr 13 20:17:32 2020 (47 secs)
+Guess.Base.......: File (human-pass.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1202.5 kH/s (0.99ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 1229/41583 (2.96%) Digests, 0/1 (0.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:12322,739322,17743736 (Min,Hour,Day)
+Progress.........: 7186432/63941069 (11.24%)
+Rejected.........: 0/7186432 (0.00%)
+Restore.Point....: 7186432/63941069 (11.24%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: $HEX[415349463031] -> $HEX[415349444f4f5349415349444f52454a41000000415349444f52454e415349444f53]
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit => s
+
+Session..........: hashcat
+Status...........: Running
+Hash.Type........: SHA1
+Hash.Target......: abc-sha1.hash
+Time.Started.....: Mon Apr 13 20:16:39 2020 (15 secs)
+Time.Estimated...: Mon Apr 13 20:17:29 2020 (35 secs)
+Guess.Base.......: File (human-pass.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1294.7 kH/s (1.00ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 5109/41583 (12.29%) Digests, 0/1 (0.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:20555,1233324,29599781 (Min,Hour,Day)
+Progress.........: 17436672/63941069 (27.27%)
+Rejected.........: 0/17436672 (0.00%)
+Restore.Point....: 17434624/63941069 (27.27%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: DELLY14 -> DELORES08
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit => s
+
+Session..........: hashcat
+Status...........: Running
+Hash.Type........: SHA1
+Hash.Target......: abc-sha1.hash
+Time.Started.....: Mon Apr 13 20:16:39 2020 (24 secs)
+Time.Estimated...: Mon Apr 13 20:17:33 2020 (30 secs)
+Guess.Base.......: File (human-pass.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1159.2 kH/s (1.03ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 8937/41583 (21.49%) Digests, 0/1 (0.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:21642,1298570,31165687 (Min,Hour,Day)
+Progress.........: 29132800/63941069 (45.56%)
+Rejected.........: 0/29132800 (0.00%)
+Restore.Point....: 29132800/63941069 (45.56%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: indivara -> indoceana
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit => s
+
+Session..........: hashcat
+Status...........: Running
+Hash.Type........: SHA1
+Hash.Target......: abc-sha1.hash
+Time.Started.....: Mon Apr 13 20:16:39 2020 (32 secs)
+Time.Estimated...: Mon Apr 13 20:17:32 2020 (21 secs)
+Guess.Base.......: File (human-pass.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1201.7 kH/s (1.00ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 11336/41583 (27.26%) Digests, 0/1 (0.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:21175,1270517,30492422 (Min,Hour,Day)
+Progress.........: 37912576/63941069 (59.29%)
+Rejected.........: 0/37912576 (0.00%)
+Restore.Point....: 37910528/63941069 (59.29%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: MELANSOSUCH -> BINVAL
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit => s
+
+Session..........: hashcat
+Status...........: Running
+Hash.Type........: SHA1
+Hash.Target......: abc-sha1.hash
+Time.Started.....: Mon Apr 13 20:16:39 2020 (48 secs)
+Time.Estimated...: Mon Apr 13 20:17:32 2020 (5 secs)
+Guess.Base.......: File (human-pass.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1188.3 kH/s (0.99ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 17723/41583 (42.62%) Digests, 0/1 (0.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:22033,1322015,31728373 (Min,Hour,Day)
+Progress.........: 56930304/63941069 (89.04%)
+Rejected.........: 0/56930304 (0.00%)
+Restore.Point....: 56930304/63941069 (89.04%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: TRAHANAWILSON -> TRAIN-BUSES
+
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  [33mApproaching final keyspace - workload adjusted.[0m
+[33m[0m
+[s]tatus [p]ause [b]ypass [c]heckpoint [q]uit =>                                                  
+Session..........: hashcat
+Status...........: Exhausted
+Hash.Type........: SHA1
+Hash.Target......: abc-sha1.hash
+Time.Started.....: Mon Apr 13 20:16:39 2020 (54 secs)
+Time.Estimated...: Mon Apr 13 20:17:33 2020 (0 secs)
+Guess.Base.......: File (human-pass.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  1212.5 kH/s (1.03ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 19716/41583 (47.41%) Digests, 0/1 (0.00%) Salts
+Recovered/Time...: CUR:N/A,N/A,N/A AVG:21793,1307631,31383146 (Min,Hour,Day)
+Progress.........: 63941069/63941069 (100.00%)
+Rejected.........: 0/63941069 (0.00%)
+Restore.Point....: 63941069/63941069 (100.00%)
+Restore.Sub.#1...: Salt:0 Amplifier:0-1 Iteration:0-1
+Candidates.#1....: $HEX[7e7e4d4f4e4b45597e7e] -> $HEX[bfbfbfbf]
+
+Started: Mon Apr 13 20:16:38 2020
+[2KStopped: Mon Apr 13 20:17:34 2020
+]0;kali@kali: ~/Desktop/lab1[01;31mkali@kali[00m:[01;34m~/Desktop/lab1[00m$ ls
+[0m[01;32mabc-sha1.hash[0m  crackedPass.txt  [01;32mhuman-pass.txt[0m  lab1-script.txt
+]0;kali@kali: ~/Desktop/lab1[01;31mkali@kali[00m:[01;34m~/Desktop/lab1[00m$ exit
+exit
+
+Script done on 2020-04-13 20:17:44-04:00 [COMMAND_EXIT_CODE="0"]
