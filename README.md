@@ -1,2 +1,2 @@
 Nat Choeypant
-Spring 2020 -- CSCI 461
+cyber security exercises for CSCI 461, Spring 2020
