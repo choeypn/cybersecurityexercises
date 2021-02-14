@@ -1,0 +1,14 @@
+Nat Choeypant
+CS461 lab3
+
+after running the gdb, here are the addresses:
+return address: 0xbfffee18
+buffer address: 0xbfffede0
+
+the distance is : 0xbfffee18 - 0xbfffede0 = 56 + 4 = 60
+
+Since we are using 32 bit system, we can add any multiple of 4 to the return address to estimate the absolute address.
+
+In this case, adding 0x08 to return adress would give us the address 
+to put out malicious code in: 
+0xbfffee18 + 0x08 = 0xbfffee20 

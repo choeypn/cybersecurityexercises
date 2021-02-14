@@ -1,0 +1,55 @@
+Script started on 2020-04-23 13:35:26-0400
+]0;osboxes@osboxes: ~/Documents/lab3[01;32mosboxes@osboxes[00m:[01;34m~/Documents/lab3[00m$ gcc -no-pie -g [K[K[K[K[K[K[K[K[K[Kz exev[Kcstrack[K[K[K[Kack -o test_shellcode test_shellcoode.c 
+]0;osboxes@osboxes: ~/Documents/lab3[01;32mosboxes@osboxes[00m:[01;34m~/Documents/lab3[00m$ ./test_shellcode 
+$ id
+uid=1000(osboxes) gid=1000(osboxes) groups=1000(osboxes),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),112(lpadmin),128(sambashare)
+$ exit
+]0;osboxes@osboxes: ~/Documents/lab3[01;32mosboxes@osboxes[00m:[01;34m~/Documents/lab3[00m$ sudo chown root test_shellcode
+[sudo] password for osboxes: *********         
+Sorry, try again.
+[sudo] password for osboxes: *********         
+]0;osboxes@osboxes: ~/Documents/lab3[01;32mosboxes@osboxes[00m:[01;34m~/Documents/lab3[00m$ sudo chmod 4755 test_shellcode
+]0;osboxes@osboxes: ~/Documents/lab3[01;32mosboxes@osboxes[00m:[01;34m~/Documents/lab3[00m$ ./test_shellcode 
+# id
+uid=0(root) gid=1000(osboxes) groups=1000(osboxes),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),112(lpadmin),128(sambashare)
+# exit
+]0;osboxes@osboxes: ~/Documents/lab3[01;32mosboxes@osboxes[00m:[01;34m~/Documents/lab3[00m$ gdb lavadecode [K[K[K[K[K[K[K[K[Kb3_vul_gdb 
+GNU gdb (Ubuntu 8.1-0ubuntu3) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from lab3_vul_gdb...done.
+(gdb) b bof
+Breakpoint 1 at 0x80484e7: file lab3_vul_program.c, line 16.
+(gdb) run
+Starting program: /home/osboxes/Documents/lab3/lab3_vul_gdb 
+
+Breakpoint 1, bof (str=0xbfffee37 "never was a cloudy dayyyyyyyy\n")
+    at lab3_vul_program.c:16
+16	    strcpy(buffer, str);       
+(gdb) p $ebp
+$1 = (void *) 0xbfffee18
+(gdb) p &buu[Kffer
+$2 = (char (*)[48]) 0xbfffede0
+(gdb) p/d 0xbfffee18 - 0x[Kxbfffede0
+$3 = 56
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 4627] will be killed.
+
+Quit anyway? (y or n) y
+]0;osboxes@osboxes: ~/Documents/lab3[01;32mosboxes@osboxes[00m:[01;34m~/Documents/lab3[00m$ exit
+exit
+
+Script done on 2020-04-23 13:37:46-0400
