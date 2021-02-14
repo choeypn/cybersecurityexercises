@@ -1,0 +1,15 @@
+Script started on 2020-05-03 16:50:33-0400
+]0;osboxes@osboxes: ~/Documents/csci-461-spring-2020/PA2[01;32mosboxes@osboxes[00m:[01;34m~/Documents/csci-461-spring-2020/PA2[00m$ exit./prog.sh 2> /dev/null
+executing vulnerable program...
+ls
+addresses	    buffer1.txt      invoke.sh	 vulnerable
+attack_program.txt  createBadFile    prog.sh	 vulnerable_program.c
+badfile		    createBadFile.c  typescript
+id
+uid=0(root) gid=1000(osboxes) groups=1000(osboxes),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),112(lpadmin),128(sambashare)
+exit
+buffer overflow successed. Shell executed.
+]0;osboxes@osboxes: ~/Documents/csci-461-spring-2020/PA2[01;32mosboxes@osboxes[00m:[01;34m~/Documents/csci-461-spring-2020/PA2[00m$ exit
+exit
+
+Script done on 2020-05-03 16:51:52-0400
